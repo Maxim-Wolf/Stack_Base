@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="/assets/img/stack-base-round.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!------------------------->
+    <!-------Server Offine----->
+    <!------------------------->
+    <div class="Server_Offine_Page" id="Server_Offine_Page">
+        <img src="/assets/img/stack-base(square).png" class="Logo_Server_Offline" alt="">
+        <div class="System_offline_card">
+            <div class="System_offline_point"></div>
+            <p class="System_offline_p">Server are offline</p>
+        </div>
+        <div>
+            <p class="System_offine_text_1">Service temporarily</p>
+            <p class="System_offine_text_2">unavailable</p>
+        </div>
+         <div>
+            <p class="System_offine_text_3">Our systems are currently undergoing a scheduled maintenance window.</p>
+            <p class="System_offine_text_4"> We'll be right back.</p>
+         </div>
+         <div class="Estimated_time_div">
+            <p class="Estimated_time_p_1">ESTIMATED TIME</p>
+            <p class="Estimated_time_p_2" id="Estimated_time_p_2"></p>
+         </div>
+         <div class="Maintenance_div">
+            <div class="Maintenance_Element_1">
+                <div class="Maintenance_point"></div>
+                <p class="Maintenance_p">Maintenance start</p>
+                <p class="Maintenance_value" id="Maintenance_value_1"></p>
+            </div>
+            <div class="Maintenance_Element_2">
+                <div class="Maintenance_point"></div>
+                <p class="Maintenance_p">Reason</p>
+                <p class="Maintenance_value" id="Maintenance_value_2"></p>
+            </div>
+         </div>
+         <div class="questions_maintenance_div">
+            <p class="questions_maintenance_p">Questions? Contact us:</p>
+            <a href="mailto:Wolfmaxim8@gmail.com" class="questions_maintenance_link">Wolfmaxim8@gmail.com</a>
+         </div>
+    </div>
+    <!------------------------->
+    <!-----------Login--------->
+    <!------------------------->
+    <div id="message-bar"></div>
+    <div class="Login_Page" id="Login_Page">
+        <img src="assets/img/stack-base(square).png" alt="" class="logo_login_register">
+        <p class="text_login1">Welcome Back</p>
+        <div class="text_login_container">
+        <p class="text_login2">Don´t have an account yet?</p>
+        <p class="text_login3" id="text_login3">Sign up</p> 
+        </div>   
+        <div class="login_form" id="login_form">
+            <input type="email" placeholder="email adress" class="login_register_input" id="login_input_email">
+            <input type="password" placeholder="Password" class="login_register_input" id="login_input_password">
+        </div>
+        <button class="register_login_btn" id="login_btn">Login</button>
+    </div>
+    <!------------------------->
+    <!----------Register------->
+    <!------------------------->
+    <div class="Register_Page" id="Register_Page">
+        <img src="assets/img/stack-base(square).png" alt="" class="logo_login_register">
+        <p class="text_register_1">Create an account</p>
+        <div class="text_register_container">
+            <p class="text_register2">You already have an account</p>
+            <p class="text_register3" id="text_register3">Login</p>
+        </div>
+        <div class="login_form" id="login_form">
+            <input type="email" placeholder="email adress" class="login_register_input" id="register_input_email">
+            <input type="password" placeholder="Password" class="login_register_input" id="register_input_password">
+        </div>
+        <button class="register_login_btn" id="register_btn">Register</button>
+    </div>
+    <div class="Projects_Page" id="Projects_Page">
+        <p>This is the Projects Page</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

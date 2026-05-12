@@ -1,0 +1,290 @@
+:root{
+    --primary: #C1FE72;
+    --secondary: #303030;
+    --border: solid 1px #303030;
+    --border_radius: 7px;
+    --margin: 10px;
+    --shadow: 0 0 1px black;
+}
+::selection {
+    background: #C1FE72;
+    color: black;
+    border-radius: 10px;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/assets/fonts/inter.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+body{
+    display: grid;
+    font-family: "Inter", sans-serif;
+    width: 100vw;
+    height: 100vh;
+    background-color: #3d3d3d;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+input:focus {
+  outline: none;
+  border: 2px solid rgb(160, 160, 160); /* deine Farbe */
+}
+.login_register_input{
+    background-color: var(--secondary);
+    color: white;
+    border: black solid 2px;
+    border-radius: var(--border_radius);
+    height: 50px;
+    width: 400px;
+    box-shadow: 0 0 1px rgb(0, 0, 0);
+    font-size: 15px;
+}
+.logo_login_register{
+    width: 100px;
+    justify-self: center;
+    border-radius: var(--border_radius);
+    box-shadow: var(--shadow);
+}
+.Login_Page, .Register_Page{
+    justify-self: center;
+    align-self: center;
+    display: grid;
+    background-color: var(--primary);
+    border-radius: var(--border_radius);
+    padding: var(--margin);
+    box-shadow: var(--shadow);
+}
+.text_login_container,.text_register_container{
+    justify-self: center;
+}
+.text_login3,.text_register3{
+color: var(--secondary);
+}
+.text_login1,.text_register_1{
+justify-self: center;
+}
+.text_login3:hover,.text_register3:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.login_form{
+    display: grid;
+    grid-gap: 10px;
+}
+.text_login_container,.text_register_container{
+    display: flex;
+    gap: 10px;
+}
+.register_login_btn{
+    font-size: 20px;
+    width: 300px;
+    height: 50px;
+    background-color:var(--secondary);
+    color: white;
+    border: var(--border);
+    border-radius: var(--border_radius);
+    margin: var(--margin);
+    justify-self: center;
+}
+.register_login_btn:hover{
+    filter: contrast(1.2);
+}
+
+.Register_Page{
+    display: none;
+}
+
+#message-bar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-20px);
+    
+    background: var(--secondary);
+    color: white;
+    
+    padding: 12px 20px;
+    border-radius: var(--border_radius);
+    box-shadow: var(--shadow);
+    border: var(--border);
+
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+/* sichtbar */
+#message-bar.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Varianten */
+#message-bar.success {
+    background: var(--primary);
+    color: black;
+}
+
+#message-bar.error {
+    background: #ff4d4f;
+}
+
+#message-bar.info {
+    background: #1677ff;
+}
+.Projects_Page{
+    display: none;
+    justify-self: center;
+    align-self: center;
+}
+.Server_Offine_Page{
+    display: none;
+    height: 100%;
+    width: 100%;
+    justify-self: center;
+    align-self: center;
+    background-image: url(/assets/img/Background.png);
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+}
+.Logo_Server_Offline{
+    margin-top: 9px;
+    border-radius: 100%;
+    width: 110px;
+    box-shadow: 0 0 3px white;
+    justify-self: center;
+}
+.System_offline_p{
+    text-align: center;
+    color: #ff4d4f;
+}
+.System_offline_card{
+    border-radius: 40px;
+    width: 200px;
+    height: 30px;
+    justify-self: center;
+    padding: 0;
+    background-color: #ff686a5f;
+    border: solid #ed0004 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.System_offline_point{
+    background-color: red;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    animation: animation infinite 2s;
+    margin: 5px;
+    box-shadow: 0 0 2px#ed0004;
+}
+@keyframes animation{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.System_offine_text_1{
+    color: white;
+    font-size: 30px;
+    justify-self: center;
+    align-self: flex-end;
+    margin: 0;
+    padding: 0;
+}
+.System_offine_text_2{
+    color: var(--primary);
+    font-size: 40px;
+    justify-self: center;
+    align-self: flex-start;
+    margin: 0;
+    padding: 0;
+}
+.System_offine_text_3{
+    color: rgba(239, 239, 239, 0.607);
+    justify-self: center;
+    font-size: 15px;
+}
+.System_offine_text_4{
+    color: rgba(249, 248, 248, 0.961);
+    justify-self: center;
+    font-size: 20px;
+}
+.Estimated_time_p_1{
+    font-size: 15px;
+    color: rgba(190, 190, 190, 0.47);
+    justify-self: center;
+    margin: 5px;
+}
+.Estimated_time_p_2{
+    color: rgb(255, 170, 0);
+    font-size: 20px;
+    justify-self: center;
+    margin: 5px;
+}
+.Estimated_time_div{
+    justify-self: center;
+    background-color: #3a3a3a67;
+    border: solid 1px #c1fe7259;
+    width: 270px;
+    height: 100px;
+    border-radius: 7px;
+}
+.Maintenance_point{
+    background-color: #C1FE72;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    margin: 5px;
+    align-self: center;
+}
+.Maintenance_div{
+    justify-self: center;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    background-color: #c1fe720b;
+    border: solid 1px #c1fe724d;
+    border-radius: 7px;
+}
+.Maintenance_Element_1, 
+.Maintenance_Element_2 {
+    display: grid;
+    /* Punkt (auto), Text (auto), Leerraum (1fr), Wert (auto) */
+    grid-template-columns: auto auto 1fr auto; 
+    gap: 12px;
+    align-items: center;
+}
+.Maintenance_p{
+    justify-self: flex-start;
+    align-self: center;
+    color: rgba(190, 190, 190, 0.47);
+}
+.Maintenance_value{
+    align-self: center;
+    justify-self: end;
+    color: white;
+}
+.questions_maintenance_link{
+    color: var(--primary);
+    justify-self: center;
+    align-self: center;
+}
+.questions_maintenance_p{
+    color: rgba(166, 166, 166, 0.454);
+    align-self: center;
+}
+.questions_maintenance_div{
+    justify-self: center;
+    display: flex;
+    gap: 10px;
+}
