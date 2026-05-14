@@ -94,7 +94,7 @@ async function login() {
         return showMessage("Please fill in all required fields.","error")
     }
     let value_email = login_input_email.value.toLowerCase();
-    let value_password = login_input_password.value.toLowerCase();
+    let value_password = login_input_password.value;
     let res = await fetch("/rs/login",{
         credentials: "include",
         headers: {"Content-Type":"application/json"},
@@ -124,7 +124,7 @@ async function check_session () {
     hidePages();
     Server_Offine_Page.style.display = "grid";
     const now = new Date();
-    const formatted_start_time = new Date(reso[0].start_time).toLocaleString("de-DE", {
+    const formatted_start_time = new Date(temporary_Data[0].start_time).toLocaleString("de-DE", {
     hour: "2-digit",
     minute: "2-digit",
     day: "2-digit",
@@ -132,13 +132,13 @@ async function check_session () {
     year: "numeric"
 });
     console.log("now: "+ now)
-    const end = new Date(reso[0].end_time);
+    const end = new Date(temporary_Data[0].end_time);
     const result = getDateDifference(
         now,
         end
 );
     Maintenance_value_1.textContent = formatted_start_time;
-    Maintenance_value_2.textContent = reso[0].reason
+    Maintenance_value_2.textContent = temporary_Data[0].reason
     startCountdown(result.hours,result.minutes);
     return "offline"
     }
@@ -149,14 +149,14 @@ async function check_session () {
         SetUILoggedIn()
     }
 }
-const reso = [
+const temporary_Data = [
     { start_time: "2026-04-20T08:00:00", end_time: "2026-04-20T21:54:00", reason: "Fatal Security Error" }
 ];
 function getDateDifference(start, end) {
     const startDate = new Date(start);
     const endDate = new Date(end);
 
-    let diffMs = endDate - startDate; // Differenz in Millisekunden
+    let diffMs = endDate - startDate; 
 
     const hours = Math.floor(diffMs / (1000 * 60 * 60));
     const minutes = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
