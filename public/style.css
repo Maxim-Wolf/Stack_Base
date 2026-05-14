@@ -18,15 +18,17 @@
   font-style: normal;
   font-display: swap;
 }
-body{
+body {
     display: grid;
     font-family: "Inter", sans-serif;
     width: 100vw;
-    height: 100vh;
-    background-color: #3d3d3d;
-    overflow: hidden;
+    min-height: 100dvh; /* Nutzt mindestens die volle Höhe */
+    background-color: #3d3d3d; /* Deine Hintergrundfarbe */
     margin: 0;
     padding: 0;
+    /* Verhindert, dass der Hintergrund beim Scrollen aufhört */
+    background-attachment: fixed; 
+    overflow-x: hidden;
 }
 input:focus {
   outline: none;
@@ -287,4 +289,24 @@ justify-self: center;
     justify-self: center;
     display: flex;
     gap: 10px;
+}
+@media (max-width: 768px) {
+    body {
+        display: block;
+        height: auto;
+        overflow-y: auto;
+    }
+
+    .Login_Page, .Register_Page {
+        margin: 10dvh auto;
+        width: 90%;
+        max-width: 400px;
+    }
+}
+
+.Server_Offine_Page {
+    min-height: 100dvh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
