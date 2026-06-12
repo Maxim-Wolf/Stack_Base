@@ -112,7 +112,12 @@ async function login() {
     showMessage("Email or password is wrong","error")
     return
     }
-    showMessage("Succesfully logged in","succes")
+    if(res.status === 200){
+        showMessage("Succesfully logged in","succes")
+    }
+    else{
+        showMessage("An error has occurred. Please try again later.","error")
+    }
 }
 async function check_session () {
     let res = await fetch("/rs/check_session",{
@@ -142,7 +147,7 @@ async function check_session () {
     startCountdown(result.hours,result.minutes);
     return "offline"
     }
-    if(res.status === 502){
+    if(res.status === 401){
     return "unautherized"
     }
     if (res.status === 200){
@@ -185,4 +190,12 @@ function startCountdown(hours, minutes) {
         Estimated_time_p_2.textContent = "~" + totalMinutes + " min";
         console.log("Soon ready")
     }, 60000); 
+}
+function selectItem(element) {
+  document.querySelectorAll('.New_Project_PopUp_Name_Drop_Down_list li').forEach(li => {
+    li.classList.remove('check-icon');
+  });
+  element.classList.add('check-icon');
+  document.querySelector('.New_Project_PopUp_Name_Drop_Down_summary').innerText = element.firstChild.textContent.trim();
+  document.getElementById('New_Project_PopUp_Name_Drop_Down').removeAttribute('open');
 }

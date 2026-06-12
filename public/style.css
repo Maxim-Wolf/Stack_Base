@@ -17,6 +17,24 @@
     color: black;
     border-radius: 10px;
 }
+.Basic_Btn{
+    background-color: #00e8b2;
+    color: #303030;
+    width: 100px;
+    height: 25px;
+    border-radius: 5px;
+    border: var(--soft_border);
+
+}
+.Dangour_Btn{
+    background-color: #ff0000;
+    color: #ffffff;
+    width: 100px;
+    height: 25px;
+    border-radius: 5px;
+    border: var(--soft_border);
+
+}
 @font-face {
   font-family: "Inter";
   src: url("/assets/fonts/inter.ttf") format("ttf");
@@ -46,6 +64,9 @@ body {
 input:focus {
   outline: none;
   border: 2px solid rgb(160, 160, 160); /* deine Farbe */
+}
+.text_login2{
+    margin-bottom: 5px;
 }
 .login_register_input{
     background-color: var(--secondary);
@@ -79,6 +100,7 @@ input:focus {
 color: var(--secondary);
 }
 .text_login1,.text_register_1{
+margin: 5px;
 justify-self: center;
 }
 .text_login3:hover,.text_register3:hover{
@@ -410,4 +432,114 @@ justify-self: center;
 .Profile_Letters{
     align-self: center;
     justify-self: center;
+}
+
+.New_Project_PopUp{
+    justify-self: center;
+    margin-top: 10vh;
+    border: var(--soft_border);
+    width: 50vw;
+    border-radius: 7px;
+    height: 50vh;
+}
+.New_Project_PopUp_Name,.New_Project_PopUp_Type,.New_Project_PopUp_Plan{
+    display: grid;
+    justify-self: center;
+    align-self: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8px;
+    border: var(--soft_border);
+}
+.New_Project_PopUp_Header{
+
+}
+.New_Project_PopUp_Name label{
+    margin: 10px;
+    font-weight: 400;
+    color: var(--secondary);
+    text-align: start;
+}
+.New_Project_PopUp_Type{
+
+}
+.New_Project_PopUp_Plan{
+
+}
+.New_Project_PopUp_Footer{
+    display: flex;
+    justify-content: center;
+}
+.New_Project_PopUp_Header h4{
+    margin: 10px;
+    font-weight: 400;
+    color: var(--secondary);
+    text-align: start;
+}
+.New_Project_PopUp_Header p{
+    padding: 10px;
+    color: #7f7f7fbc;
+    text-align: start ;
+    font-size: 15px;
+    border-bottom: var(--soft_border);
+}
+.New_Project_PopUp_Name_Drop_Down {
+    position: relative;
+    width: 250px;
+    font-family: sans-serif;
+    user-select: none;
+  }
+
+  .New_Project_PopUp_Name_Drop_Down_summary {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+    list-style: none; /* Entfernt den Standard-Pfeil */
+  }
+
+  .New_Project_PopUp_Name_Drop_Down_list {
+    position: absolute;
+    width: 100%;
+    margin: 5px 0 0 0;
+    padding: 0;
+    list-style: none;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 10;
+  }
+
+  .New_Project_PopUp_Name_Drop_Down_list li {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background 0.2s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Hover Effekt */
+  .New_Project_PopUp_Name_Drop_Down_list li:hover {
+    background-color: #f0f0f0;
+  }
+
+  /* Häkchen Icon (wird per JS hinzugefügt) */
+  .check-icon::after {
+    color: #4CAF50;
+    font-weight: bold;
+  }
+  .icon-check{
+    width: 15px;
+  }
+  /* Das Icon ist standardmäßig versteckt */
+.icon-check {
+  display: none; 
+}
+
+/* Nur wenn das übergeordnete LI die Klasse .check-icon hat, wird das Icon in diesem LI angezeigt */
+.check-icon .icon-check {
+  display: block;
 }
