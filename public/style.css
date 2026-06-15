@@ -53,17 +53,16 @@ body {
     display: grid;
     font-family: "Inter", sans-serif;
     width: 100vw;
-    min-height: 100dvh; /* Nutzt mindestens die volle Höhe */
-    background-color: #3d3d3d; /* Deine Hintergrundfarbe */
+    min-height: 100dvh; 
+    background-color: #3d3d3d;
     margin: 0;
     padding: 0;
-    /* Verhindert, dass der Hintergrund beim Scrollen aufhört */
     background-attachment: fixed; 
     overflow-x: hidden;
 }
 input:focus {
   outline: none;
-  border: 2px solid rgb(160, 160, 160); /* deine Farbe */
+  border: 2px solid rgb(160, 160, 160); 
 }
 .text_login2{
     margin-bottom: 5px;
@@ -153,13 +152,11 @@ justify-self: center;
     transition: all 0.3s ease;
 }
 
-/* sichtbar */
 #message-bar.show {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
 }
 
-/* Varianten */
 #message-bar.success {
     background: var(--primary);
     color: black;
@@ -296,7 +293,6 @@ justify-self: center;
 .Maintenance_Element_1, 
 .Maintenance_Element_2 {
     display: grid;
-    /* Punkt (auto), Text (auto), Leerraum (1fr), Wert (auto) */
     grid-template-columns: auto auto 1fr auto; 
     gap: 12px;
     align-items: center;
@@ -344,202 +340,4 @@ justify-self: center;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-}
-.Projects_Page{
-    display: none;
-    width: 100%;
-    height: 100%;
-}
-.header_projects_page{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    gap: 8px;
-    align-self: flex-start;
-    justify-self: center;
-    border-bottom: var(--soft_border);
-    width: 100%;
-    height: 40px;
-}
-.header_projects_page_section1{
-    justify-self: flex-start;
-    display: flex;
-    align-self: center;
-}
-
-.header_projects_page_section3{
-    justify-self: flex-end;
-    padding: 10px;
-    grid-column-start: 4;
-    align-self: center;
-}
-.logo_s{
-    width: 20px;
-    height: 20px;
-    align-self: center;
-    margin: 10px;
-}
-.logo_s:hover{
-    cursor: pointer;
-}
-.slash{
-    align-self: center;
-    align-self: center;
-    font-weight: 200;
-    color: #9b9b9b;
-}
-.new_Project_header{
-    align-self: center;
-    margin-left: 5px;
-    font-family: "Commissioner", sans-serif;
-    font-weight: 400;
-    font-size: 15px;
-}
-.Feedback_button{
-    color: #545454;
-    background-color: transparent;
-    border: none;
-    font-family: "Commissioner", sans-serif;
-    font-weight: 400;
-    font-size: 13px;
-    width: 65px;
-    height: 25px;
-    border-radius: 20px 20px 20px 20px;
-    align-self: center;
-    margin-right: 10px;
-}
-.Feedback_button:hover{
-    transition: all 0.1s;
-    background-color: #d6d6d6bc;
-    color: #272727;
-}
-.User_Profile_new_project{
-    border-radius: 50%;
-    height: 30px;
-    width: 30px;
-    display: flex;
-    border: var(--border);
-    place-content: center;
-    background-color: var(--primary);
-}
-.header_projects_page_section2{
-    display: flex;
-    justify-self: flex-end;
-    grid-column-start: 4;
-    align-self: center;
-    margin-right: 5px;
-}
-.Profile_Letters{
-    align-self: center;
-    justify-self: center;
-}
-
-.New_Project_PopUp{
-    justify-self: center;
-    margin-top: 10vh;
-    border: var(--soft_border);
-    width: 50vw;
-    border-radius: 7px;
-    height: 50vh;
-}
-.New_Project_PopUp_Name,.New_Project_PopUp_Type,.New_Project_PopUp_Plan{
-    display: grid;
-    justify-self: center;
-    align-self: center;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 8px;
-    border: var(--soft_border);
-}
-.New_Project_PopUp_Header{
-
-}
-.New_Project_PopUp_Name label{
-    margin: 10px;
-    font-weight: 400;
-    color: var(--secondary);
-    text-align: start;
-}
-.New_Project_PopUp_Type{
-
-}
-.New_Project_PopUp_Plan{
-
-}
-.New_Project_PopUp_Footer{
-    display: flex;
-    justify-content: center;
-}
-.New_Project_PopUp_Header h4{
-    margin: 10px;
-    font-weight: 400;
-    color: var(--secondary);
-    text-align: start;
-}
-.New_Project_PopUp_Header p{
-    padding: 10px;
-    color: #7f7f7fbc;
-    text-align: start ;
-    font-size: 15px;
-    border-bottom: var(--soft_border);
-}
-.New_Project_PopUp_Name_Drop_Down {
-    position: relative;
-    width: 250px;
-    font-family: sans-serif;
-    user-select: none;
-  }
-
-  .New_Project_PopUp_Name_Drop_Down_summary {
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background: white;
-    cursor: pointer;
-    list-style: none; /* Entfernt den Standard-Pfeil */
-  }
-
-  .New_Project_PopUp_Name_Drop_Down_list {
-    position: absolute;
-    width: 100%;
-    margin: 5px 0 0 0;
-    padding: 0;
-    list-style: none;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background: white;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    z-index: 10;
-  }
-
-  .New_Project_PopUp_Name_Drop_Down_list li {
-    padding: 10px 15px;
-    cursor: pointer;
-    transition: background 0.2s;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  /* Hover Effekt */
-  .New_Project_PopUp_Name_Drop_Down_list li:hover {
-    background-color: #f0f0f0;
-  }
-
-  /* Häkchen Icon (wird per JS hinzugefügt) */
-  .check-icon::after {
-    color: #4CAF50;
-    font-weight: bold;
-  }
-  .icon-check{
-    width: 15px;
-  }
-  /* Das Icon ist standardmäßig versteckt */
-.icon-check {
-  display: none; 
-}
-
-/* Nur wenn das übergeordnete LI die Klasse .check-icon hat, wird das Icon in diesem LI angezeigt */
-.check-icon .icon-check {
-  display: block;
 }
