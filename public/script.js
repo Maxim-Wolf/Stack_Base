@@ -15,9 +15,7 @@ const Estimated_time_p_2 = document.getElementById("Estimated_time_p_2");
 const Maintenance_value_1 = document.getElementById("Maintenance_value_1")
 const Maintenance_value_2 = document.getElementById("Maintenance_value_2")
 login_btn.addEventListener("click",()=>{
-    login().then(()=>{
-        check_session();
-    })
+    login();
 })
 register_btn.addEventListener("click",register);
 text_login3.addEventListener("click",get_register_page);
@@ -33,7 +31,7 @@ function hidePages () {
 }
 function get_projects_page () {
     hidePages()
-    Projects_Page.style.display = "grid";
+    Projects_Page.style.display = "flex";
 }
 
 function get_register_page () {
@@ -89,6 +87,16 @@ async function register () {
     }
     showMessage("Account has been created","succes");
 }
+login_input_email.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        login();
+    }
+});
+login_input_password.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        login();
+    }
+});
 async function login() {
     if(!login_input_email || !login_input_password){
         return showMessage("Please fill in all required fields.","error")
@@ -114,6 +122,7 @@ async function login() {
     }
     if(res.status === 200){
         showMessage("Succesfully logged in","succes")
+        check_session();
         return
     }
     else{
